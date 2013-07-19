@@ -25,6 +25,12 @@ class TestRange(unittest.TestCase):
         r1 = Range(None, None)
         self.assertFalse(r1)
 
+    def test_addition(self):
+        r1 = Range(1, 3)
+        r2 = Range(2, 5)
+        self.assertEqual(r1 + r2, 5)
+        self.assertEqual(r2 + r1, 5)
+
     def test_union(self):
         r1 = Range(2, 6)
         r2 = Range(3, 8)
