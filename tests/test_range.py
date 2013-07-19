@@ -97,3 +97,7 @@ class TestRange(unittest.TestCase):
         r1 = Range(1.2, 6)
         r2 = Range(3, 6.4)
         self.assertEqual(r1 & r2, Range(3, 6))
+
+    def test_len(self):
+        r = Range(0, 3)
+        self.assertEqual(len(r), 3)

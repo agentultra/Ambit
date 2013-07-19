@@ -51,3 +51,6 @@ class Range(namedtuple("Range", ["start", "end"])):
         end = max([self.end, other.end])
 
         return Range(start, end)
+
+    def __len__(self):
+        return self.interval
