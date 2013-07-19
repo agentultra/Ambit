@@ -18,6 +18,9 @@ class Range(namedtuple("Range", ["start", "end"])):
     def __mul__(self, other):
         return self.interval * other.interval
 
+    def __div__(self, other):
+        return self.interval / other.interval
+
     def __nonzero__(self):
         if all([f is not None for f in self._fields]):
             if self.start or self.end:
