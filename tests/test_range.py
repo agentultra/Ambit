@@ -31,6 +31,12 @@ class TestRange(unittest.TestCase):
         self.assertEqual(r1 + r2, 5)
         self.assertEqual(r2 + r1, 5)
 
+    def test_subtraction(self):
+        r1 = Range(0, 4)
+        r2 = Range(0, 2)
+        self.assertEqual(r1 - r2, 2)
+        self.assertEqual(r2 - r1, -2)
+
     def test_union(self):
         r1 = Range(2, 6)
         r2 = Range(3, 8)
