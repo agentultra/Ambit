@@ -5,6 +5,10 @@ class Range(namedtuple("Range", ["start", "end"])):
 
     __slots__ = ()
 
+    @property
+    def interval(self):
+        return self.end - self.start
+
     def __nonzero__(self):
         if all([f is not None for f in self._fields]):
             if self.start or self.end:

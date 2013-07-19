@@ -5,6 +5,10 @@ from ambit.range import Range
 
 class TestRange(unittest.TestCase):
 
+    def test_interval(self):
+        r1 = Range(1, 3)
+        self.assertEqual(r1.interval, 2)
+
     def test_positive_range_is_true(self):
         r1 = Range(0, 1)
         self.assertTrue(r1)
