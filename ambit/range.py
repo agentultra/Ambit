@@ -21,6 +21,18 @@ class Range(namedtuple("Range", ["start", "end"])):
     def __div__(self, other):
         return self.interval / other.interval
 
+    def __iadd__(self, other):
+        raise ValueError("Operation not supported")
+
+    def __isub__(self, other):
+        raise ValueError("Operation not supported")
+
+    def __imul__(self, other):
+        raise ValueError("Operation not supported")
+
+    def __idiv__(self, other):
+        raise ValueError("Operation not supported")
+
     def __nonzero__(self):
         if all([f is not None for f in self._fields]):
             if self.start or self.end:

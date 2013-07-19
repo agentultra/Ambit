@@ -48,6 +48,26 @@ class TestRange(unittest.TestCase):
         r2 = Range(0, 2)
         self.assertEqual(r1 / r2, 2)
 
+    def test_iadd(self):
+        r = Range(0, 3)
+        with self.assertRaises(ValueError):
+            r += 1
+
+    def test_isub(self):
+        r = Range(0, 3)
+        with self.assertRaises(ValueError):
+            r -= 1
+
+    def test_imul(self):
+        r = Range(0, 3)
+        with self.assertRaises(ValueError):
+            r *= 1
+
+    def test_idiv(self):
+        r = Range(0, 3)
+        with self.assertRaises(ValueError):
+            r /= 1
+
     def test_union(self):
         r1 = Range(2, 6)
         r2 = Range(3, 8)
