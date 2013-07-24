@@ -7,7 +7,7 @@ class TestInterval(unittest.TestCase):
 
     def test_interval(self):
         r1 = Interval(1, 3)
-        self.assertEqual(r1.size, 2)
+        self.assertEqual(r1.size, 3)
 
     def test_positive_range_is_true(self):
         r1 = Interval(0, 1)
@@ -111,4 +111,4 @@ class TestInterval(unittest.TestCase):
 
     def test_len(self):
         r = Interval(0, 3)
-        self.assertEqual(len(r), 3)
+        self.assertEqual(len(r), 4)

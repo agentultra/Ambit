@@ -8,7 +8,7 @@ class Interval(namedtuple("Interval", ["start", "end"])):
 
     @property
     def size(self):
-        return self.end - self.start
+        return (self.end - self.start) + 1
 
     def _quotients(self, divop, other):
         if not all([other.start, other.end]):
