@@ -1,16 +1,16 @@
 Ambit
 =====
 
-A library for manipulating ranges within a series.
+A library for interval arithmetic, bisection, and analysis.
 
-    >>> from ambit.range import Range
-    >>> Range(2, 8) | Range(5, 13)
-    Range(2, 13)
-    >>> Range(2, 8) & Range (5, 10)
-    Range(5, 8)
-    >>> len(Range(0, 3))
+    >>> from ambit.interval import Interval
+    >>> Interval(2, 8) | Interval(5, 13)
+    Interval(2, 13)
+    >>> Interval(2, 8) & Interval(5, 10)
+    Interval(5, 8)
+    >>> len(Interval(0, 3))
     3
-    >>> Range(0, 3) + Range (2, 4)
-    5
+    >>> Interval(0, 3) + Interval(2, 4)
+    Interval(3, 7)
 
 And other such things.
